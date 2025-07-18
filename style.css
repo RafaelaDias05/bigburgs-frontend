@@ -433,3 +433,46 @@
     font-size: 1rem; /* 16px */
     font-weight: 500;
 }
+
+/*bordas do pop-up*/
+.red-alert {
+    border: 3px solid var(--red-500) !important;
+    border-radius: 10px;
+  }
+
+.text-error{
+  color: var(--red-500);
+  font-size: var(--body-3-font-size);
+  font-family: var(--body-3-font-family);
+  font-weight: var(--body-3-font-weight);
+  letter-spacing: var(--body-3-letter-spacing);
+  line-height: var(--body-3-line-height);
+  font-style: var(--body-3-font-style);
+}
+
+.black-alert{
+   border: 3px solid var(--sumi-ink) !important;
+   border-radius: 10px;
+}
+
+.text-alert{
+  color: var(--sumi-ink);
+  font-size: var(--body-3-font-size);
+  font-family: var(--body-3-font-family);
+  font-weight: var(--body-3-font-weight);
+  letter-spacing: var(--body-3-letter-spacing);
+  line-height: var(--body-3-line-height);
+  font-style: var(--body-3-font-style);
+}
+
+.message-field{
+  font-size: var(--caption-font-size);
+  text-align: left;
+  margin-top: 8px;
+  color: var(--red-400);
+  font-family: var(--caption-font-family);
+  font-weight: var(--caption-font-weight);
+  letter-spacing: var(--caption-letter-spacing);
+  line-height: var(--caption-line-height);
+  font-style: var(--caption-font-style);
+}
