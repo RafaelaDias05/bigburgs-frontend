@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>BigBurg's</title>
+    <link rel="stylesheet" href="../global.css"/>
+    <link rel="stylesheet" href="../styleguide.css"/>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+  <body>
+    <main class="gerenciar-mesa">
+      <aside class="sidebar"></aside>
+      <section class="ctn-flex ctn-display-flex-column div ctn-width">
+        <section>
+            <h1 class="title">Cardápio</h1>
+            <p class="description">Gerencie aqui o cardápio do estabelecimento.</p>
+        </section>
+        <section class="ctn-flex ctn-justify-space-between">
+            <a href="cadastrar.html"><button class="btn-primary">Novo Cardápio</button></a>
+            <div class="search-bar">
+                <div class="search-input">
+                <span class="search-icon"><img src="../assets/lupa.png" alt="Limpar" /></span>
+                <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+                <button class="clear-search" aria-label="Limpar busca">
+                    <img src="../assets/_Close.png" alt="Limpar" />
+                </button>
+                </div>
+                <button class="btn-pesquisar">Pesquisar</button>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="1">
+              <div>
+                <p id="produto-nome">American Bacon</p>
+                <p id="produto-desc" class="light">Hambúrguer, bacon, queijo, presunto, tomate e alface</p>
+              </div>
+                <div id="produto-preco" class="status tag">R$ 20,00</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="2">
+              <div>
+                <p id="produto-nome">Churrasquinho</p>
+                <p id="produto-desc" class="light">Picanha, bacon, milho, cebola, tomate e alface</p>
+              </div>
+                <div id="produto-preco" class="status tag">R$ 22,00</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="3">
+              <div>
+                <p id="produto-nome">Galinha Mista</p>
+                <p id="produto-desc" class="light">Frango, picanha, milho, presunto, queijo, tomate e alface</p>
+              </div>
+                <div id="produto-preco" class="status tag">R$ 22,00</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="../assets/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
