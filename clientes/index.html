@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8"/>
+    <title>BigBurg's</title>
+    <link rel="stylesheet" href="../global.css"/>
+    <link rel="stylesheet" href="../styleguide.css"/>
+    <link rel="stylesheet" href="../style.css"/>
+  </head>
+  <body>
+    <main class="gerenciar-mesa">
+      <aside class="sidebar"></aside>
+      <section class="ctn-flex ctn-display-flex-column div ctn-width">
+        <section>
+            <h1 class="title">Clientes</h1>
+            <p class="description">Gerencie aqui os clientes do estabelecimento.</p>
+        </section>
+        <section class="ctn-flex ctn-justify-space-between">
+            <a href="../pedido/index.html"><button class="btn-primary">Novo Cliente</button></a>
+            <div class="search-bar">
+                <div class="search-input">
+                <span class="search-icon"><img src="../assets/lupa.png" alt="Limpar" /></span>
+                <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+                <button class="clear-search" aria-label="Limpar busca">
+                    <img src="../assets/_Close.png" alt="Limpar" />
+                </button>
+                </div>
+                <button class="btn-pesquisar">Pesquisar</button>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+              <div>
+                <p>João Silva</p>
+                <p class="light">Avenida Otávio Santos,  123 - Recreio</p>
+              </div>
+                <div class="status tag">Última compra há 10 dias</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+              <div>
+                <p>Maria de Jesus</p>
+                <p class="light">Avenida Lauro de Freitas, 456 - Centro</p>
+              </div>
+                <div class="status tag">Última compra há 03 dias</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+              <div>
+                <p>Paulo Souza</p>
+                <p class="light">Rua das Acácias, 789 - Jardins</p>
+              </div>
+                <div class="status tag">Última compra há 20 dias</div>
+                <div>
+                    <button class="btn-alterar">Alterar</button>
+                    <button class="btn-excluir">Excluir</button>
+                </div>
+            </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

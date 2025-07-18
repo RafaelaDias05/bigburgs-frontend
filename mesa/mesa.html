@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Gerenciar Mesa</title>
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../styleguide.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="gerenciar-mesa">
+      <div class="container">
+        <aside class="sidebar"></aside>
+        <section class="content">
+          <h1 class="title">Mesa</h1>
+          <p class="description">Gerencie aqui as mesas do estabelecimento.</p>
+          <button class="btn-novo-mesa">Novo Mesa</button>
+          <div class="search-bar">
+            <div class="search-input">
+              <span class="search-icon">􀊫</span>
+              <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+              <button class="clear-search" aria-label="Limpar busca">
+                <img src="img/state-x.svg" alt="Limpar" />
+              </button>
+            </div>
+            <button class="btn-pesquisar">Pesquisar</button>
+          </div>
+          <table class="table-mesas">
+            <thead>
+              <tr>
+                <th>Mesa</th>
+                <th>Status</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mesa 01</td>
+                <td><span class="status ocupada">Ocupada</span></td>
+                <td>
+                  <button class="btn-alterar">Alterar</button>
+                  <button class="btn-excluir">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mesa 02</td>
+                <td><span class="status livre">Livre</span></td>
+                <td>
+                  <button class="btn-alterar">Alterar</button>
+                  <button class="btn-excluir">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mesa 03</td>
+                <td><span class="status livre">Livre</span></td>
+                <td>
+                  <button class="btn-alterar">Alterar</button>
+                  <button class="btn-excluir">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mesa 04</td>
+                <td><span class="status ocupada">Ocupada</span></td>
+                <td>
+                  <button class="btn-alterar">Alterar</button>
+                  <button class="btn-excluir">Excluir</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Mesa 05</td>
+                <td><span class="status livre">Livre</span></td>
+                <td>
+                  <button class="btn-alterar">Alterar</button>
+                  <button class="btn-excluir">Excluir</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
