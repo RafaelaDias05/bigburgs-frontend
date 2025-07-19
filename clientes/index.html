@@ -27,7 +27,7 @@
             <div class="search-bar">
                 <div class="search-input">
                 <span class="search-icon"><img src="../assets/lupa.png" alt="Limpar" /></span>
-                <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+                <input class="termo-pesquisado" type="text" placeholder="Buscar" aria-label="Buscar mesa" />
                 <button class="clear-search" aria-label="Limpar busca">
                     <img src="../assets/_Close.png" alt="Limpar" />
                 </button>
@@ -36,10 +36,10 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="1">
               <div>
-                <p>João Silva</p>
-                <p class="light">Avenida Otávio Santos,  123 - Recreio</p>
+                <p id="nome">João Silva</p>
+                <p id="endereco" class="light">Avenida Otávio Santos,  123 - Recreio</p>
               </div>
                 <div class="status tag">Última compra há 10 dias</div>
                 <div>
@@ -49,10 +49,10 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="2">
               <div>
-                <p>Maria de Jesus</p>
-                <p class="light">Avenida Lauro de Freitas, 456 - Centro</p>
+                <p id="nome">Maria de Jesus</p>
+                <p id="endereco" class="light">Avenida Lauro de Freitas, 456 - Centro</p>
               </div>
                 <div class="status tag">Última compra há 03 dias</div>
                 <div>
@@ -62,10 +62,10 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="3">
               <div>
-                <p>Paulo Souza</p>
-                <p class="light">Rua das Acácias, 789 - Jardins</p>
+                <p id="nome">Paulo Souza</p>
+                <p id="endereco" class="light">Rua das Acácias, 789 - Jardins</p>
               </div>
                 <div class="status tag">Última compra há 20 dias</div>
                 <div>
@@ -76,5 +76,9 @@
         </section>
       </section>
     </main>
+    <script src="../assets/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="../assets/functions.js"></script>
   </body>
 </html>
