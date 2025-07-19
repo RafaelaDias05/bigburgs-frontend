@@ -504,3 +504,11 @@
 #status-label{
   margin-top: 20px;
 }
+
+.icon-home{
+  position: absolute;
+  width: 54px;
+  height: 45px;
+  left: 56px;
+  top: 773px;
+}

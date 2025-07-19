@@ -10,7 +10,13 @@
   </head>
   <body>
     <main class="gerenciar-mesa">
-      <aside class="sidebar"></aside>
+      <aside class="sidebar">
+        <a href="../index.html">
+        <div class="icon-home">
+          <img src="../assets/Frame (5).png" alt="Ícone de Home">
+        </div>
+        </a>
+      </aside>
       <section class="ctn-flex ctn-display-flex-column div ctn-width">
         <section>
             <h1 class="title">Pedido</h1>
@@ -21,7 +27,7 @@
             <div class="search-bar">
                 <div class="search-input">
                 <span class="search-icon"><img src="../assets/lupa.png" alt="Limpar" /></span>
-                <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+                <input class="termo-pesquisado" type="text" placeholder="Buscar" aria-label="Buscar mesa" />
                 <button class="clear-search" aria-label="Limpar busca">
                     <img src="../assets/_Close.png" alt="Limpar" />
                 </button>
@@ -30,9 +36,9 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
-                <p>Pedido 01</p>
-                <div class="status tag">Em preparo</div>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="1">
+                <p id="numero">Pedido 01</p>
+                <div id="status" class="status tag">Em preparo</div>
                 <div>
                     <button class="btn-alterar">Alterar</button>
                     <button class="btn-excluir">Excluir</button>
@@ -40,9 +46,9 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
-                <p class="">Pedido 02</p>
-                <div class="status tag">Concluido</div>
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="2">
+                <p id="numero">Pedido 02</p>
+                <div id="status" class="status tag">Concluido</div>
                 <div>
                     <button class="btn-alterar">Alterar</button>
                     <button class="btn-excluir">Excluir</button>
