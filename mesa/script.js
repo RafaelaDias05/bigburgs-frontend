@@ -4,30 +4,21 @@ const botoesExcluir = document.querySelectorAll('.btn-excluir');
 const botaoPesquisar = document.querySelector('.btn-pesquisar');
 const botaoLimparPesquisa = document.querySelector('.clear-search');
 
-let cardapio = {
-    "American Bacon":{
-        id: "1",
-        ingredientes: "Hambúrguer, bacon, queijo, presunto, tomate e alface",
-        valor: "R$ 20,00"
+let mesas = {
+    "Mesa 01":{
+        status: "Ocupada"
     },
-    "Churrasquinho":{
-        id: "2",
-        ingredientes: "Picanha, bacon, milho, cebola, tomate e alface",
-        valor: "R$ 22,00"
-    },
-    "Galinha Mista":{
-        id: "3",
-        ingredientes: "Frango, picanha, milho, presunto, queijo, tomate e alface",
-        valor: "R$ 22,00"
+    "Mesa 02":{
+         status: "Livre"
     },
 };
 
-function pesquisarCardapio(){ 
+function pesquisarMesas(){ 
     let pesquisa = document.querySelector('.termo-pesquisado').value.trim();
-    if (cardapio[pesquisa]) {
+    if (mesas[pesquisa]) {
         elementos =  document.querySelectorAll('.ctn-flex.ctn-flex-grid.ctn-table-line');
         for (elemento of elementos){
-            if(elemento.querySelector("#produto-nome").innerText != pesquisa){
+            if(elemento.querySelector("#numero").innerText != pesquisa){
                 elemento.style.display = 'none';
             }
         }
@@ -44,50 +35,46 @@ function limparPesquisa(){
     }
 }
 
-function alterarCardapio(botao){
+function alterarMesa(botao){
     let itemAtual = null;
     const item = botao.closest('.ctn-flex.ctn-flex-grid.ctn-table-line');
     itemAtual = item;
 
     const id = item.dataset.id;
-    const nome = item.querySelector('#produto-nome').innerText;
-    const desc = item.querySelector('#produto-desc').innerText;
-    const preco = item.querySelector('#produto-preco').innerText.replace('R$', '').trim();
+    const numero = item.querySelector('#numero').innerText;
+    const status = item.querySelector('#status').innerText;
 
-    const url = new URL('cardapio/alterar.html', window.location.origin);
+    const url = new URL('mesa/alterar.html', window.location.origin);
     url.searchParams.set('id', id);
-    url.searchParams.set('nome', nome);
-    url.searchParams.set('descricao', desc);
-    url.searchParams.set('preco', preco);
+    url.searchParams.set('numero', numero);
+    url.searchParams.set('status', status);
  
     window.location.href = url;
 }
 
- document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
 
     if(params.has('id')) {
       const id = params.get('id');
-      const nome = params.get('nome');
-      const desc = params.get('desc');
-      const preco = params.get('preco');
+      const numero = params.get('numero');
+      const status = params.get('status');
 
       const item = document.querySelector(`#${id}`);
       if(item) {
-        item.querySelector('#produto-nome').innerText = nome;
-        item.querySelector('#produto-desc').innerText = desc;
-        item.querySelector('#produto-preco').innerText = `R$ ${preco}`;
+        item.querySelector('#numero').innerText = "Mesa " + numero;
+        item.querySelector('#status').innerText = `${status}`;
       }
     }
 });
 
-botaoPesquisar.addEventListener('click', pesquisarCardapio);
+botaoPesquisar.addEventListener('click', pesquisarMesas);
 
 botaoLimparPesquisa.addEventListener('click', limparPesquisa);
 
 botoesAlterar.forEach(botao => {
     botao.addEventListener('click', () => {
-        alterarCardapio(botao);
+        alterarMesa(botao);
     });
 });
 
@@ -95,8 +82,8 @@ botoesExcluir.forEach(botao => {
     botao.addEventListener('click', () => {
         const item = botao.closest('.ctn-flex.ctn-flex-grid.ctn-table-line');
         if(item){
-            const objeto = item.querySelector('#produto-nome').innerText;
-            const texto = "Você tem certeza que deseja excluir o cardápio " + objeto + "?";
+            const objeto = item.querySelector('#numero').innerText;
+            const texto = "Você tem certeza que deseja excluir a mesa " + objeto + "?";
             alertarConfirmacaoExclusao(texto, botao)
         } 
     });

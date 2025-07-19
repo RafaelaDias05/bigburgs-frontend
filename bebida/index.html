@@ -17,11 +17,11 @@
             <p class="description">Gerencie aqui as bebidas do estabelecimento.</p>
         </section>
         <section class="ctn-flex ctn-justify-space-between">
-            <a href="../clientes/index.html"><button class="btn-primary">Nova Bebida</button></a>
+            <a href="cadastrar.html"><button class="btn-primary">Nova Bebida</button></a>
             <div class="search-bar">
                 <div class="search-input">
                 <span class="search-icon"><img src="../assets/lupa.png" alt="Limpar" /></span>
-                <input type="text" placeholder="Buscar" aria-label="Buscar mesa" />
+                <input class="termo-pesquisado" type="text" placeholder="Buscar" aria-label="Buscar mesa" />
                 <button class="clear-search" aria-label="Limpar busca">
                     <img src="../assets/_Close.png" alt="Limpar" />
                 </button>
@@ -30,11 +30,11 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="1">
               <div>
-                <p>Coca-Cola Lata 350ml</p>
+                <p id="produto-nome">Coca-Cola Lata 350ml</p>
               </div>
-                <div class="status tag">R$ 5,00</div>
+                <div id="produto-preco" class="status tag">R$ 5,00</div>
                 <div>
                     <button class="btn-alterar">Alterar</button>
                     <button class="btn-excluir">Excluir</button>
@@ -42,11 +42,11 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="2">
               <div>
-                <p>Guaraná Antarctica Lata 350ml</p>
+                <p id="produto-nome">Guaraná Antarctica Lata 350ml</p>
               </div>
-                <div class="status tag">R$ 5,00</div>
+                <div id="produto-preco" class="status tag">R$ 5,00</div>
                 <div>
                     <button class="btn-alterar">Alterar</button>
                     <button class="btn-excluir">Excluir</button>
@@ -54,11 +54,11 @@
             </div>
         </section>
         <section>
-            <div class="ctn-flex ctn-flex-grid ctn-table-line">
+            <div class="ctn-flex ctn-flex-grid ctn-table-line" data-id="3">
               <div>
-                <p>Coca-Cola 1 Litro</p>
+                <p id="produto-nome">Coca-Cola 1 Litro</p>
               </div>
-                <div class="status tag">R$ 8,00</div>
+                <div id="produto-preco" class="status tag">R$ 8,00</div>
                 <div>
                     <button class="btn-alterar">Alterar</button>
                     <button class="btn-excluir">Excluir</button>
@@ -67,5 +67,9 @@
         </section>
       </section>
     </main>
+    <script src="../assets/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+    <script src="../assets/functions.js"></script>
   </body>
 </html>

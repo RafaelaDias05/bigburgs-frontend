@@ -13,25 +13,26 @@
       <aside class="sidebar"></aside>
       <section class="ctn-flex ctn-display-flex-column div ctn-width">
         <section>
-            <h1 class="title">Mesa</h1>
-            <p class="description">Cadastre aqui a mesa do estabelecimento.</p>
+            <h1 class="title">Bebida</h1>
+            <p class="description">Cadastre aqui as bebidas do estabelecimento.</p>
         </section>
         <section class="ctn-margin">
-          <form class="mesa-form">
-            <div class="form-group">
-              <label id="numero-label" for="numero" class="label">Número*</label>
-              <input type="text" id="numero" name="numero" class="input-field" required />
-              <label id="status-label" for="status" class="label">Situação*</label>
-              <select class="input-field" id="status" name="status" required>
-                <option value="ocupada">Ocupada</option>
-                <option value="livre">Livre</option>
-              </select>
+          <form class="mesa-form ctn-flex" style="flex-direction: column; gap: 27px;">
+            <div class="form-group ctn-flex" style="gap: 27px;">
+                <div style="flex: 2;">
+                    <label for="nome" id="nome-label" class="label">Nome*</label>
+                    <input type="text" id="nome" name="nome" class="input-field" required />
+                </div>
+                <div style="flex: 1;">
+                    <label for="preco" id="preco-label" class="label">Preço*</label>
+                    <input type="text" id="preco" name="preco" class="input-field" required />
+                </div>
             </div>
           </form>
         </section>
         <section class="ctn-margin">
           <div class="button-group">
-            <button type="button"  id="cancelar" class="btn btn-secondary">Cancelar</button>
+            <button type="button" id="cancelar" class="btn btn-secondary">Cancelar</button>
             <button type="submit" id="salvar" class="btn btn-primary">Salvar</button>
           </div>
         </section>
@@ -40,6 +41,6 @@
     <script src="../assets/functions.js"></script>
     <script src="../assets/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="cadastrar.js"></script>
+    <script src="alterar.js"></script>
   </body>
 </html>

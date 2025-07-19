@@ -95,7 +95,6 @@
   width: 166px;
   height: 100vh;
   background-color: #d7d7d780;
-  justify-self: flex-start;
 }
 
 .title {
@@ -117,7 +116,7 @@
   letter-spacing: var(--body-3-letter-spacing);
   line-height: var(--body-3-line-height);
   font-style: var(--body-3-font-style);
-  margin-bottom: 41px;
+  margin-bottom: 19px;
 }
 
 .btn-novo-mesa {
@@ -237,9 +236,9 @@
 }
 
 .btn-excluir {
-  background-color: #ffffff;
-  border: 2px solid var(--oriental-pink);
-  color: var(--oriental-pink);
+  background-color: #ef4444;
+  border: 1px solid #ef4444;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -273,7 +272,7 @@
 }
 
 .mesa-form {
-  margin-top: 96px;
+  margin-top: 20px;
 }
 
 .cliente-form {
@@ -330,7 +329,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .btn {
@@ -364,20 +363,17 @@
 .dashboard-container {
     background-color: var(--container-color);
     padding: 50px 60px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 700px;
     text-align: center;
 }
 
 /* Título "Visão Geral" */
 .dashboard-title {
-    color: var(--primary-text-color);
-    font-size: 2.5rem; /* 40px */
-    font-weight: 600;
+    color: #000000;
+    font-size: 64px;
+    font-weight: 500;
     margin-top: 0;
     margin-bottom: 50px;
+    font-family: var(--body-1-font-family);
 }
 
 /* A grade que segura todos os itens do menu */
@@ -430,11 +426,12 @@
 
 /* O texto abaixo de cada ícone */
 .menu-label {
-    font-size: 1rem; /* 16px */
-    font-weight: 500;
+  font-family: var(--body-1-font-family);
+  font-size: 18px; /* 16px */
+  font-weight: 500;
+  color: #000000;
 }
 
-/*bordas do pop-up*/
 .red-alert {
     border: 3px solid var(--red-500) !important;
     border-radius: 10px;
@@ -475,4 +472,35 @@
   letter-spacing: var(--caption-letter-spacing);
   line-height: var(--caption-line-height);
   font-style: var(--caption-font-style);
+}
+
+.card{
+  border: 1px solid #603c3d;
+  border-radius: 10px;
+}
+
+.confirm-alert{
+  font-size: var(--title-7-font-size);
+  text-align: center;
+  color: var(--sumi-ink);
+  font-family: var(--title-7-font-family);
+  font-weight: var(--title-7-font-weight);
+  letter-spacing: var(--title-7-letter-spacing);
+  line-height: var(--title-7-line-height);
+  font-style: var(--title-7-font-style);
+}
+
+.text-action{
+  font-size: var(--body-3-font-size);
+  text-align: center;
+  color: var(--cherry-blossom);
+  font-family: var(--body-3-font-family);
+  font-weight: var(--body-3-font-weight);
+  letter-spacing: var(--body-3-letter-spacing);
+  line-height: var(--body-3-line-height);
+  font-style: var(--body-3-font-style);
+}
+
+#status-label{
+  margin-top: 20px;
 }

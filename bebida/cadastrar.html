@@ -20,11 +20,11 @@
           <form class="mesa-form ctn-flex" style="flex-direction: column; gap: 27px;">
             <div class="form-group ctn-flex" style="gap: 27px;">
                 <div style="flex: 2;">
-                    <label for="nome" class="label">Nome*</label>
+                    <label for="nome" id="nome-label" class="label">Nome*</label>
                     <input type="text" id="nome" name="nome" class="input-field" required />
                 </div>
                 <div style="flex: 1;">
-                    <label for="preco" class="label">Preço*</label>
+                    <label for="preco" id="preco-label" class="label">Preço*</label>
                     <input type="text" id="preco" name="preco" class="input-field" required />
                 </div>
             </div>
@@ -32,11 +32,15 @@
         </section>
         <section class="ctn-margin">
           <div class="button-group">
-            <button type="button" class="btn btn-secondary">Cancelar</button>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="button" id="cancelar" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" id="salvar" class="btn btn-primary">Salvar</button>
           </div>
         </section>
       </section>
     </main>
+    <script src="../assets/functions.js"></script>
+    <script src="../assets/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="cadastrar.js"></script>
   </body>
 </html>

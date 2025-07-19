@@ -18,6 +18,34 @@ window.alertarOperacaoRealizada = function(texto){
     });
 }
 
+window.alertarConfirmacaoExclusao = function(texto, botao){
+    Swal.fire({
+        html:`<span class="confirm-alert">${texto}</span>
+        <p class="text-action"> Esta ação não poderá ser desfeita.</p>
+        <div class="button-group">
+        <button id="cancelar" class="btn btn-secondary">Cancelar</button>
+        <button  id="confirmar" class="btn btn-primary">Confirmar</button>
+        </div>`,
+        showConfirmButton: false,
+        customClass: {
+            popup: 'black-alert'
+        },
+        didOpen: () => {
+            document.querySelector('#cancelar').addEventListener('click', () => {
+                Swal.close(); 
+            });
+            document.querySelector('#confirmar').addEventListener('click', () => {
+                Swal.close(); 
+                const item = botao.closest('section');
+                if (item) {
+                    item.remove(); 
+                    alertarOperacaoRealizada("Operação realizada com sucesso!");
+                }
+            });
+        }
+    });
+}
+
 window.exibirErroCampo = function(nome, campo, texto){
     const mensagemErro = document.createElement("p");
     mensagemErro.classList.add("message-field");
